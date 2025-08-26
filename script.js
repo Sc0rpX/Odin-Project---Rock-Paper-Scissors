@@ -7,16 +7,30 @@ function getComputerChoice(){
     return options[randomIndex]
 }
 
-console.log(getComputerChoice())
-
 function getHumanChoice(){
     // Prompt the user to choose
     const choice = prompt("Choose your move (rock, paper or scissor):")
     // Return the value choosen by the user
-    return choice
+    return choice.toLowerCase()
 }
-
-console.log(getHumanChoice())
 
 let computerScore = 0
 let humanScore = 0
+
+function playRound(humanChoice, computerChoice){
+    if ((humanChoice === "rock" && computerChoice === "scissor") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissor" && computerChoice === "paper")){
+        ++humanScore;
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`)
+    }
+    else if((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissor") || (humanChoice === "scissor" && computerChoice === "rock")){
+        ++computerScore
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`)
+    }
+    else{
+        console.log("It's a Draw!")
+    }
+}
+
+playRound(getHumanChoice(), getComputerChoice())
+console.log(humanScore)
+console.log(computerScore)
