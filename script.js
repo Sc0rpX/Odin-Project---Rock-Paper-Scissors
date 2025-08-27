@@ -14,23 +14,45 @@ function getHumanChoice(){
     return choice.toLowerCase()
 }
 
-let computerScore = 0
-let humanScore = 0
 
-function playRound(humanChoice, computerChoice){
-    if ((humanChoice === "rock" && computerChoice === "scissor") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissor" && computerChoice === "paper")){
-        ++humanScore;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}.`)
+
+function playGame(){
+    let humanScore = 0
+    let computerScore = 0
+
+    function playRound(humanChoice, computerChoice){
+        if ((humanChoice === "rock" && computerChoice === "scissor") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissor" && computerChoice === "paper")){
+            ++humanScore;
+            console.log(`You win! ${humanChoice} beats ${computerChoice}.\n `)
+        }
+        else if((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissor") || (humanChoice === "scissor" && computerChoice === "rock")){
+            ++computerScore
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.\n `)
+        }
+        else{
+            console.log(`It's a Draw! You both choose ${humanChoice}\n `)
+        }
+
+        console.log(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\n `)
     }
-    else if((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissor") || (humanChoice === "scissor" && computerChoice === "rock")){
-        ++computerScore
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`)
+
+    function getWinner(humanScore, computerScore){
+        if(humanScore > computerScore){
+            console.log(`You Won The Game!`)
+        }
+        else if(computerScore > humanScore){
+            console.log(`You lost The Game`)
+        }
+        else{
+            console.log("It's a Draw!")
+        }
     }
-    else{
-        console.log("It's a Draw!")
+
+    for(let i = 1; i <= 5; i++){
+        playRound(getHumanChoice(), getComputerChoice())
     }
+
+    getWinner(humanScore, computerScore)
 }
 
-playRound(getHumanChoice(), getComputerChoice())
-console.log(humanScore)
-console.log(computerScore)
+playGame()
