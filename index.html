@@ -5,9 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 
-    <script src="script.js"></script>
+    <!-- Press Start 2P and Outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <section class="hero-section">
+        <div class="heading-section">
+            <h1 class="title">Rock Paper Scissor</h1>
+        </div>
 
+        <div class="container">
+            <div class="round-wrapper">
+                <h2 id="round-indicator">Round: 1</h2>
+            </div>
+    
+            <div class="choice-wrapper">
+                <div class="choice-section">
+                    <h3 class="score" id="playerscore">Your Score: 0</h3>
+                    <div class="sign" id="playersign">
+                        ?
+                    </div>
+                </div>
+    
+                <div class="choice-section">
+                    <h3 class="score" id="computerscore">Computer's Score: 0</h3>
+                    <div class="sign" id="computersign">
+                        ?
+                    </div>
+                </div>
+            </div>
+    
+            <div class="result-wrapper">
+                <p id="result">First to score 5 points wins the game</p>
+                <p id="result-description"></p>
+            </div>
+    
+            <div class="players-selection-wrapper">
+                <p class="player-selection-title">Choose Your Weapon</p>
+                <div class="player-buttons-wrapper" id="buttons">
+                    <button class="player-button sign" id="rock">👊</button>
+                    <button class="player-button sign" id="paper">🖐️</button>
+                    <button class="player-button sign" id="scissor">✌️</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Copyright © 2025 <a href="https://github.com/sc0rpx">Sc0rpX</a></p>
+        </div>
+
+        <!-- End Game Overlay -->
+        <div id="overlay">
+            <div class="overlay-card">
+                <p id="finalResult">You Win the Game!</p>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

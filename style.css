@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    background-color: #0F172A;
+    font-family: 'Outfit';
+    color: #F9FAFB;
+}
+
+.hero-section{
+    height: 100vh;
+    position: relative;
+}
+
+.heading-section{
+    background-color: #6366F1;
+    display: flex;
+    justify-content: center;
+    padding: 20px 5px;
+}
+
+.title{
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.round-wrapper{
+    text-align: center;
+}
+
+#round-indicator{
+    font-size: 36px;
+}
+
+.choice-wrapper{
+    display: flex;
+}
+
+.choice-section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score{
+    font-size: 28px;
+}
+
+.sign{
+    font-size: 120px;
+}
+
+.players-selection-wrapper{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 4px solid #334155;
+    padding: 32px 0;
+    margin: 100px auto 0;
+}
+
+.player-selection-title{
+    display: inline;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #0F172A;
+    padding: 8px;
+
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: -50px;
+}
+
+.player-buttons-wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-button{
+    padding: 10px;
+    background-color: #0F172A;
+    border-radius: 14px;
+}
+
+.result-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#result{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#result-description{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer{
+    color: #64748B;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a{
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#overlay{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #334155cb;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-card{
+    background-color: #0F172A;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+}
+
+#finalResult{
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+#playAgain{
+    width: 100%;
+    background-color: #334155;
+    color: white;
+    font-size: 36px;
+    padding: 10px 0;
+}
